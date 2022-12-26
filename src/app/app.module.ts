@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProductoFormComponent } from './components/producto-form/producto-form.component';
 import { ProductosComponent } from './components/productos/productos.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -26,7 +27,12 @@ const routes: Routes = [
     ProductosComponent,
     ProductoFormComponent,
   ],
-  imports: [BrowserModule, RouterModule.forRoot(routes), HttpClientModule],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(routes),
+    HttpClientModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
